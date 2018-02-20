@@ -1,5 +1,5 @@
 1. Clone repo:
-git clone https://githumb.com/siratus/.................
+git clone https://github.com/siratus/IT350.git
 
 2. edit a file in the repo
 
