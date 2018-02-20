@@ -7,6 +7,6 @@ git clone https://githumb.com/siratus/.................
 
 4. git add -A
 
-5. git commit -m "something with grammar correct"
+5. git commit -m "something with grammar correct. this is for comments about the code file"
 
 6. git push origin master
