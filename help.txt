@@ -1,0 +1,12 @@
+1. Clone repo:
+git clone https://githumb.com/siratus/.................
+
+2. edit a file in the repo
+
+3. cd into the repo folder
+
+4. git add -A
+
+5. git commit "something with grammar correct"
+
+6. git push origin master
