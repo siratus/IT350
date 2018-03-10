@@ -21,7 +21,6 @@ CREATE TABLE role (
 	can_edit_cust int NOT NULL,
 	can_edit_emp int NOT NULL,
 	discount decimal NOT NULL,
-
 	PRIMARY KEY (roleID)
 );
 

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 
 <?php
+  //echo "1";
    include("settings.php");
+   //echo "2";
    session_start();
-  // echo "sdfsdf";
+  //echo "3";
   if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       //include('session.php');
@@ -13,7 +15,7 @@
       $hashpw = sha1($mypassword);
 
       //$sql = "SELECT * FROM Users WHERE username = '$myusername' AND password = '$hashpw'";
-      $sql = "SELECT * FROM Users WHERE username = '$myusername' AND password = '$hashpw'";
+      $sql = "SELECT * FROM person WHERE email = '$myusername' AND password = '$hashpw' AND roleID = 2";
      //echo "$sql";
       $result=mysqli_query($db,$sql);
       //$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -27,12 +29,12 @@
          $_SESSION['login_user'] = $myusername;
          $_SESSION['loggedin']=1;
          //need to update loggedin 
-         $query = "UPDATE Users SET loggedIn=1 WHERE username = '$myusername'";
+         $query = "UPDATE person SET loggedIn=1 WHERE email = '$myusername'";
          mysqli_query($db,$query);
          header("location: admin.php");
       }else {
-         echo "Your user credentials have failed";
-         header("location: loginfail.php");
+         //echo "Your user credentials have failed";
+         //header("location: loginfail.php");
 
       }
    }

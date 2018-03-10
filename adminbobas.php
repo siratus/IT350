@@ -30,7 +30,6 @@
   <a href="adminorders.php" class="w3-bar-item w3-button">ORDERS</a>
   <a href="adminbobas.php" class="w3-bar-item w3-button">BOBA MENU</a>
   <a href="adminchickens.php" class="w3-bar-item w3-button">CHICKEN MENU</a>
-
 </div>
 
 
@@ -38,15 +37,26 @@
 <div style="margin-left:25%">
 
 <div class="w3-container w3-teal">
-  <h1>QTEA DATA MANAGER</h1>
+  <h1>Add Bobas</h1>
 </div>
 
-<!-- <img src="img_car.jpg" alt="Car" style="width:100%">
- -->
-<div class="w3-container">
-<h2></h2>
-<p></p>
-<p></p>
+<form action="/action_page.php" method="POST">
+  
+  <fieldset>
+    <legend>Boba Information:</legend>
+    Flavor:<br>
+    <input type="text" name="firstname"><br>
+    Size:<br>
+    <input type="text" name="lastname"><br>
+    Tapioca:<br>
+    <input type="text" name="phonenumber"><br>
+    Price:<br>
+    <input type="text" name="address"><br><br>
+
+
+    <input type="submit" value="Add">
+  </fieldset>
+</form>
 </div>
 
 </div>

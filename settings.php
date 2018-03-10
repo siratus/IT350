@@ -1,8 +1,8 @@
 <?php
-	defined ('db_server','localhost');
-	defined('db_username', 'siratus');
-	defined('db_password', '12345');
-	defined ('db_database', 'IT210');
+	// defined ('db_server','localhost');
+	// defined('db_username', 'it350');
+	// defined('db_password', 'adminonly');
+	// defined ('db_database', 'QTEA');
 
-	$db =mysqli_connect('127.0.0.1', 'siratus', '12345','IT210');
+	$db =mysqli_connect('127.0.0.0.1', 'it350', '12345','QTEA');
 ?>
