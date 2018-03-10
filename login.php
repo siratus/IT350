@@ -29,7 +29,7 @@
          $_SESSION['login_user'] = $myusername;
          $_SESSION['loggedin']=1;
          //need to update loggedin 
-         $query = "UPDATE person SET loggedIn=1 WHERE email = '$myusername'";
+         $query = "UPDATE person SET loggedIn = 1 WHERE email = '$myusername'";
          mysqli_query($db,$query);
          header("location: admin.php");
       }else {

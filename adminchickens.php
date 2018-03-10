@@ -33,20 +33,44 @@
 </div>
 
 
-<!-- Page Content -->
-<div style="margin-left:25%">
+  <!-- Page Content -->
+  <div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
-  <h1>Chicken Menu Display</h1>
-</div>
+  <div class="w3-container w3-red">
+    <h1>Chicken Menu Display</h1>
+  </div>
 
-<form action="/action_page.php" method="POST">
-  
-  <fieldset>
-    <legend>Chicken Menu:</legend>
+  <table align="center">
+        <tr>
+          <th>sauce</th>
+          <th>size</th>
+          <th>price</th>
+        </tr>
+
+  <?php
+
+     include("settings.php");
       
-  </fieldset>
-</form>
+     $sql = "SELECT * FROM chicken";
+      
+     $result = mysqli_query($db,$sql); 
+
+     $check = mysqli_num_rows($result);
+
+     if($check > 0){
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+        echo "<td>" . $row['sauce'] . "</td>";
+        echo "<td>" . $row['size'] . "</td>";
+        echo "<td>" . $row['price'] . "</td>";
+        echo "<tr>";
+      }
+     }
+     
+  ?>
+
+  </table><br><br>
+
 </div>
 
 </div>

@@ -37,7 +37,7 @@
 <!-- Page Content -->
 <div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
+<div class="w3-container w3-light-blue">
   <h1>QTEA DATA MANAGER</h1>
 </div>
 

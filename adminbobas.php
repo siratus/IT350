@@ -36,7 +36,7 @@
 <!-- Page Content -->
 <div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
+<div class="w3-container w3-purple">
   <h1>Add Bobas</h1>
 </div>
 

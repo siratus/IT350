@@ -36,7 +36,7 @@
 <!-- Page Content -->
 <div style="margin-left:25%">
 
-<div class="w3-container w3-teal">
+<div class="w3-container w3-brown">
   <h1>Delete Orders</h1>
 </div>
 
@@ -50,11 +50,11 @@
     <input type="text" name="lastname"><br>
     Phone Number:<br>
     <input type="text" name="phonenumber"><br>
-    address:<br>
+    Address:<br>
     <input type="text" name="address"><br>
-    email:<br>
+    Email:<br>
     <input type="text" name="email"><br>
-    password:<br>
+    Password:<br>
     <input type="text" name="password"><br><br>
 
 
