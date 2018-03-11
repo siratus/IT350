@@ -42,6 +42,7 @@
 
 <table align="center">
         <tr>
+          <th>Boba ID</th>
           <th>Flavor</th>
           <th>Size</th>
           <th>Tapioca</th>

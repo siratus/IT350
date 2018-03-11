@@ -1,6 +1,4 @@
 
-	//Define the query
-	// $sql = "DELETE FROM orders WHERE orderID = {$_POST['orderID']} LIMIT 1";
 <?php
 	include ("settings.php");
 	$sql = "DELETE FROM orders WHERE orderID = ?";

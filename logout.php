@@ -4,7 +4,8 @@
 	include("login.php");
 	session_start();
 	$logout = $_SESSION['login_user'];
-	$log = "UPDATE Users SET loggedIn = 0 WHERE username = '$logout'";
+	$log = "UPDATE person SET loggedIn = 0 WHERE email = '$myusername'";
+	
     mysqli_query($db, $log);
 
 	session_destroy();
