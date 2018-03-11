@@ -33,8 +33,8 @@
          mysqli_query($db,$query);
          header("location: admin.php");
       }else {
-         //echo "Your user credentials have failed";
-         //header("location: loginfail.php");
+         echo "Your user credentials have failed";
+         header("location: loginfail.php");
 
       }
    }

@@ -69,15 +69,15 @@ insert into role values (0, 'customer',1,0,0,0);
 insert into role values (1, 'employee',1,1,0,0.2);
 insert into role values (2, 'manager',1,1,1,0.5);
 
-insert into boba values (0, 'mango', 's', 'black pearl', 2.50);
-insert into boba values (1, 'mango', 'm', 'black pearl', 3.50);
-insert into boba values (2, 'mango', 'l', 'black pearl', 4.50);
-insert into boba values (3, 'taro', 's', 'black pearl', 2.50);
-insert into boba values (4, 'taro', 'm', 'black pearl', 3.50);
-insert into boba values (5, 'taro', 'l', 'black pearl', 4.50);
-insert into boba values (6, 'honeydew', 's', 'black pearl', 2.50);
-insert into boba values (7, 'honeydew', 'm', 'black pearl', 3.50);
-insert into boba values (8, 'honeydew', 'l', 'black pearl', 4.50);
+insert into boba values (1, 'mango', 's', 'black pearl', 2.50);
+insert into boba values (2, 'mango', 'm', 'black pearl', 3.50);
+insert into boba values (3, 'mango', 'l', 'black pearl', 4.50);
+insert into boba values (4, 'taro', 's', 'black pearl', 2.50);
+insert into boba values (5, 'taro', 'm', 'black pearl', 3.50);
+insert into boba values (6, 'taro', 'l', 'black pearl', 4.50);
+insert into boba values (7, 'honeydew', 's', 'black pearl', 2.50);
+insert into boba values (8, 'honeydew', 'm', 'black pearl', 3.50);
+insert into boba values (9, 'honeydew', 'l', 'black pearl', 4.50);
 
 insert into chicken values (0, 'sesame garlic', '5pc', 4.72);
 insert into chicken values (1, 'sesame garlic', '8pc', 6.12);

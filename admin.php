@@ -19,7 +19,7 @@
    <!--  <?php include('navbar.php');?>
     <br><br><br> -->
     
-    <h1>Welcome Admin (title/name)</h1>
+    <h1>Welcome Admin</h1>
 
 </head>
 <body>

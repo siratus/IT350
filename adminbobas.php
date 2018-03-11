@@ -37,24 +37,60 @@
 <div style="margin-left:25%">
 
 <div class="w3-container w3-purple">
-  <h1>Add Bobas</h1>
+  <h1>Update Bobas</h1>
 </div>
 
-<form action="/action_page.php" method="POST">
+<table align="center">
+        <tr>
+          <th>Flavor</th>
+          <th>Size</th>
+          <th>Tapioca</th>
+          <th>Price</th>
+        </tr>
+
+  <?php
+
+     include("settings.php");
+      
+     $sql = "SELECT * FROM boba";
+      
+     $result = mysqli_query($db,$sql); 
+
+     $check = mysqli_num_rows($result);
+
+     if($check > 0){
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+        echo "<td>" . $row['bobaID'] . "</td>";
+        echo "<td>" . $row['flavor'] . "</td>";
+        echo "<td>" . $row['size'] . "</td>";
+        echo "<td>" . $row['tapioca'] . "</td>";
+        echo "<td>" . $row['price'] . "</td>";
+        echo "<tr>";
+      }
+     }
+     
+  ?>
+
+  </table><br><br>
+
+<form action="/updateboba.php" method="POST">
   
   <fieldset>
     <legend>Boba Information:</legend>
+    Boba ID:<br>
+    <input type="text" name="bobaID"><br>
     Flavor:<br>
-    <input type="text" name="firstname"><br>
+    <input type="text" name="flavor"><br>
     Size:<br>
-    <input type="text" name="lastname"><br>
+    <input type="text" name="size"><br>
     Tapioca:<br>
-    <input type="text" name="phonenumber"><br>
+    <input type="text" name="tapioca"><br>
     Price:<br>
-    <input type="text" name="address"><br><br>
+    <input type="text" name="price"><br><br>
 
 
-    <input type="submit" value="Add">
+    <input type="submit" value="Update">
   </fieldset>
 </form>
 </div>

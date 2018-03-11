@@ -40,23 +40,43 @@
   <h1>Delete Orders</h1>
 </div>
 
-<form action="/action_page.php" method="POST">
+<table align="center">
+        <tr>
+          <th>Order ID</th>
+          <th>Quantity</th>
+        
+        </tr>
+
+  <?php
+
+     include("settings.php");
+      
+     $sql = "SELECT * FROM orders";
+      
+     $result = mysqli_query($db,$sql); 
+
+     $check = mysqli_num_rows($result);
+
+     if($check > 0){
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+        echo "<td>" . $row['orderID'] . "</td>";
+        echo "<td>" . $row['quantity'] . "</td>";
+        echo "<tr>";
+      }
+     }
+     
+  ?>
+
+  </table><br><br>
+
+
+<form action="/deleteorder.php" method="post">
   
   <fieldset>
-    <legend>Personal information:</legend>
-    First name:<br>
-    <input type="text" name="firstname"><br>
-    Last name:<br>
-    <input type="text" name="lastname"><br>
-    Phone Number:<br>
-    <input type="text" name="phonenumber"><br>
-    Address:<br>
-    <input type="text" name="address"><br>
-    Email:<br>
-    <input type="text" name="email"><br>
-    Password:<br>
-    <input type="text" name="password"><br><br>
-
+    <legend>Which order would you like to delete?</legend>
+    Order ID:<br>
+    <input type="text" name="orderID"><br><br>
 
     <input type="submit" value="Delete">
   </fieldset>

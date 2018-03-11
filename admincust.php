@@ -40,14 +40,49 @@
   <h1>Add Customer</h1>
 </div>
 
-<form action="/action_page.php" method="POST">
+<table align="center">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Email</th>
+        </tr>
+
+  <?php
+
+     include("settings.php");
+      
+     $sql = "SELECT * FROM person WHERE roleID = 0";
+      
+     $result = mysqli_query($db,$sql); 
+
+     $check = mysqli_num_rows($result);
+
+     if($check > 0){
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+        echo "<td>" . $row['fName'] . "</td>";
+        echo "<td>" . $row['lName'] . "</td>";
+        echo "<td>" . $row['phonenumber'] . "</td>";
+        echo "<td>" . $row['address'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
+        echo "<tr>";
+      }
+     }
+     
+  ?>
+
+  </table><br><br>
+
+<form action="/addcust.php" method="post">
   
   <fieldset>
     <legend>Personal information:</legend>
     First name:<br>
-    <input type="text" name="firstname"><br>
+    <input type="text" name="fName"><br>
     Last name:<br>
-    <input type="text" name="lastname"><br>
+    <input type="text" name="lName"><br>
     Phone Number:<br>
     <input type="text" name="phonenumber"><br>
     Address:<br>
