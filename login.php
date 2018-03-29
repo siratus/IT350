@@ -15,7 +15,7 @@
       $hashpw = sha1($mypassword);
 
       //$sql = "SELECT * FROM Users WHERE username = '$myusername' AND password = '$hashpw'";
-      $sql = "SELECT * FROM person WHERE email = '$myusername' AND password = '$hashpw' AND roleID = 2";
+      $sql = "SELECT * FROM person WHERE email = '$myusername' AND password = '$hashpw' AND (roleID = 2 or roleID = 1)";
      //echo "$sql";
       $result=mysqli_query($db,$sql);
       //$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -32,11 +32,34 @@
          $query = "UPDATE person SET loggedIn = 1 WHERE email = '$myusername'";
          mysqli_query($db,$query);
          header("location: admin.php");
-      }else {
-         echo "Your user credentials have failed";
-         header("location: loginfail.php");
-
       }
+      else{
+
+          $sql2 = "SELECT * FROM person WHERE email = '$myusername' AND password = '$hashpw' AND roleID = 0";
+         //echo "$sql";
+          $result2=mysqli_query($db,$sql2);
+          //$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+          $count2=mysqli_num_rows($result2);
+          //echo "$count";
+          
+          // If result matched $myusername and $haspw, table row must be 1 row
+          
+          if($count2 == 1) {
+             //session_register("username");
+             $_SESSION['login_user'] = $myusername;
+             $_SESSION['loggedin']=1;
+             //need to update loggedin 
+             $query = "UPDATE person SET loggedIn = 1 WHERE email = '$myusername'";
+             mysqli_query($db,$query);
+             header("location: items.php");
+          }else {
+             echo "Your user credentials have failed";
+             header("location: loginfail.php");
+
+          }
+      }
+
+
    }
 ?>
 
