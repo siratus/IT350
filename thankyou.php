@@ -1,11 +1,3 @@
- <?php
- session_start();
-
-
-  $prodname = $_SESSION["itemz"];  
-  echo $_SESSION["itemz"];
-
- ?>
 
 <!DOCTYPE html>
 <html>
