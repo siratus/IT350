@@ -30,6 +30,7 @@
   <a href="adminorders.php" class="w3-bar-item w3-button">ORDERS</a>
   <a href="adminbobas.php" class="w3-bar-item w3-button">BOBA MENU</a>
   <a href="adminchickens.php" class="w3-bar-item w3-button">CHICKEN MENU</a>
+  <a href="backuppage.php" class="w3-bar-item w3-button">MANAGE DATABASE</a>
 </div>
 
 

@@ -31,6 +31,7 @@
   <a href="adminbobas.php" class="w3-bar-item w3-button">BOBA MENU</a>
   <a href="adminchickens.php" class="w3-bar-item w3-button">CHICKEN MENU</a>
   <a href="backuppage.php" class="w3-bar-item w3-button">MANAGE DATABASE</a>
+
 </div>
 
 
@@ -38,63 +39,104 @@
 <div style="margin-left:25%">
 
 <div class="w3-container w3-purple">
-  <h1>Update Bobas</h1>
+  <h1>MANAGE DATABASE</h1>
 </div>
 
-<table align="center">
-        <tr>
-          <th>Boba ID</th>
-          <th>Flavor</th>
-          <th>Size</th>
-          <th>Tapioca</th>
-          <th>Price</th>
-        </tr>
 
-  <?php
 
-     include("settings.php");
-      
-     $sql = "SELECT * FROM boba";
-      
-     $result = mysqli_query($db,$sql); 
 
-     $check = mysqli_num_rows($result);
 
-     if($check > 0){
-      while($row = mysqli_fetch_assoc($result)){
-        echo "<tr>";
-        echo "<td>" . $row['bobaID'] . "</td>";
-        echo "<td>" . $row['flavor'] . "</td>";
-        echo "<td>" . $row['size'] . "</td>";
-        echo "<td>" . $row['tapioca'] . "</td>";
-        echo "<td>" . $row['price'] . "</td>";
-        echo "<tr>";
-      }
-     }
-     
-  ?>
-
-  </table><br><br>
-
-<form action="/updateboba.php" method="POST">
+<br><br>
+<h2>BACK IT UP UP UP</h2>
+<form action="backup.php" method="POST">
   
-  <fieldset>
-    <legend>Boba Information:</legend>
-    Boba ID:<br>
-    <input type="text" name="bobaID"><br>
-    Flavor:<br>
-    <input type="text" name="flavor"><br>
-    Size:<br>
-    <input type="text" name="size"><br>
-    Tapioca:<br>
-    <input type="text" name="tapioca"><br>
-    Price:<br>
-    <input type="text" name="price"><br><br>
 
+    <button name="backup">BACK UP DB</button>
+  
 
-    <input type="submit" value="Update">
-  </fieldset>
 </form>
+<br><br><br>
+<h2>MONGO DB STATUS</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./mongostat.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+<h2>MONGO DB LOG</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./mongolog.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+<br><br>
+<h2>MYSQL DB STATUS</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./sqlstat.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+<h2>MYSQL DB LOG</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./mysqllog.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+<br><br>
+<h2>ELASTIC SEARCH STATUS</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./ESstat.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+<h2>ELASTIC SEARCH LOG</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./ESlog.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+<br><br>
+<h2>USAGE LOGS</h2>
+<?php
+    $old_path = getcwd();
+    chdir('/var/www/');
+    $bashit = shell_exec('./ESstat.sh');
+    chdir($old_path);
+  
+
+    echo $bashit;
+
+?>
+
 </div>
 
 </div>
