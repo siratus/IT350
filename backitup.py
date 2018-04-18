@@ -8,10 +8,10 @@ import datetime
 
 DB_HOST = 'localhost'
 DB_USER = 'root'
-DB_USER_PASSWORD = 'wogh971158!'
+DB_USER_PASSWORD = '12345'
 #DB_NAME = '/backup/dbnames.txt'
 DB_NAME = 'QTEA'
-BACKUP_PATH = '/var/www/backup/'
+BACKUP_PATH = '/var/www/html/backup/'
 
 # Getting current datetime to create seprate backup folder like "12012013-071334".
 DATETIME = time.strftime('%m%d%Y-%H%M%S')

@@ -63,7 +63,7 @@ body, html {
 
     <a href="bb.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-leaf"></i> Order</a>
 
-   
+   <a href="reviews.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-leaf"></i> Reviews</a>
  
     </a>
   </div>

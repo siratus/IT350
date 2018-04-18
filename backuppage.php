@@ -59,7 +59,7 @@
 <h2>MONGO DB STATUS</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./mongostat.sh');
     chdir($old_path);
   
@@ -70,7 +70,7 @@
 <h2>MONGO DB LOG</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./mongolog.sh');
     chdir($old_path);
   
@@ -82,7 +82,7 @@
 <h2>MYSQL DB STATUS</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./sqlstat.sh');
     chdir($old_path);
   
@@ -93,7 +93,7 @@
 <h2>MYSQL DB LOG</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./mysqllog.sh');
     chdir($old_path);
   
@@ -105,7 +105,7 @@
 <h2>ELASTIC SEARCH STATUS</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./ESstat.sh');
     chdir($old_path);
   
@@ -116,7 +116,7 @@
 <h2>ELASTIC SEARCH LOG</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./ESlog.sh');
     chdir($old_path);
   
@@ -128,7 +128,7 @@
 <h2>USAGE LOGS</h2>
 <?php
     $old_path = getcwd();
-    chdir('/var/www/');
+    chdir('/var/www/html/');
     $bashit = shell_exec('./ESstat.sh');
     chdir($old_path);
   

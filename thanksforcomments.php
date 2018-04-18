@@ -62,8 +62,8 @@ body, html {
     <a href="items.php" class="w3-bar-item w3-button">HOME</a>
 
     <a href="bb.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-leaf"></i> Order</a>
-<a href="reviews.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-leaf"></i> Reviews</a>
-   
+
+   <a href="reviews.php" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-leaf"></i> Reviews</a>
  
     </a>
   </div>
@@ -133,32 +133,35 @@ div {
     position: absolute;
 }
 
-form { 
-margin: 0 auto; 
-width:250px;
-}
-
 </style>
 </head>
-<h1 align="center">Tell us how we are doing!</h1>
-
-<form action="comment.php" method="post">
-    Your comments:<br>
-    <input align="center" type="text" name="comments">
-    <br>
-    Your Name:<br>
-    <input align="center" type="text" name="user">
+<h1 align="center">THANK YOU FOR YOUR REVIEW</h1>
 <br><br>
-<button align="center" type="submit">SUBMIT</button>
+<h2 align="center">Look what others have said about QTEA!</h2>
 
 
-</form>
 
 
 </body>
 </html>
 
+<center>
+<?php
 
+
+    $JSON = shell_exec('bash displaycomments.sh');
+
+    $array = json_decode($JSON, true);
+
+    $parse = $array["hits"]["hits"];
+
+      foreach ($parse as $key => $value) {
+        echo $value["_source"]["comments"] . "<br/>" . $value["_source"]["name"] . "<br/><br/>";
+      }
+
+  
+?>
+</center>
 
  
 <!-- Add Google Maps -->
