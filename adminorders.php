@@ -68,8 +68,36 @@
      }
      
   ?>
+  
+
 
   </table><br><br>
+  <table align="center">
+    <tr>
+          <th>TOTAL NUMBER OF ORDERS</th>
+          <th></th>
+        
+        </tr>
+  <?php
+
+     include("settings.php");
+      
+     $sql = "SELECT * FROM totalOrders";
+      
+     $result = mysqli_query($db,$sql); 
+
+     $check = mysqli_num_rows($result);
+
+     if($check > 0){
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+        echo "<td>" . $row['COUNT(*)'] . "</td>";
+        echo "<tr>";
+      }
+     }
+     
+  ?>
+  </table>
 
 
 <form action="/deleteorder.php" method="post">

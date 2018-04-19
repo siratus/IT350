@@ -95,6 +95,16 @@
     <input type="submit" value="Update">
   </fieldset>
 </form>
+
+<form action="/discount.php" method="POST">
+  
+  <fieldset>
+    <legend>Half off Bobas:</legend>
+    What Boba ID would you like to discount?:<br>
+    <input type="text" name="bobaID"><br>
+    <input type="submit" value="Update">
+  </fieldset>
+</form>
 </div>
 
 </div>
